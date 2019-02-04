@@ -25,10 +25,10 @@ const elminarProducto = (req, res) => {
 }
 
 const actualizarProducto = (req, res) => {
-  const { id, name } = req.body
+  const { id, name, foto } = req.body
 
   data = data.filter(item => item.id !== id)
-  data.push({ id, name })
+  data.push({ id, name, foto })
 
   res.send(data)
 }
