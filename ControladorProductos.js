@@ -24,9 +24,19 @@ const elminarProducto = (req, res) => {
   res.send(data)
 }
 
+const actualizarProducto = (req, res) => {
+  const { id, name } = req.body
+
+  data = data.filter(item => item.id !== id)
+  data.push({ id, name })
+
+  res.send(data)
+}
+
 module.exports = {
   todoProductos,
   productoId,
   agregarProducto,
-  elminarProducto
+  elminarProducto,
+  actualizarProducto
 }

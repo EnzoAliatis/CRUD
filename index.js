@@ -25,4 +25,9 @@ app.post('/productos', (req, res) => {
   ControladorProductos.agregarProducto(req, res)
 })
 
+app.put('/productos', (req, res) => {
+  ControladorProductos.actualizarProducto(req, res)
+})
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
